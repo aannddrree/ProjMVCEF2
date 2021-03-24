@@ -134,7 +134,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Dog.cs" />
-    <Compile Include="Models\Raca.cs" />
+    <Compile Include="Models\Breed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

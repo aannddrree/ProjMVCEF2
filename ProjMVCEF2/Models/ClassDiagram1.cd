@@ -3,18 +3,18 @@
   <Class Name="ProjMVCEF2.Models.Dog">
     <Position X="1.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Models\Dog.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Raca" />
+      <Property Name="Breed" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="ProjMVCEF2.Models.Raca">
-    <Position X="4.5" Y="1" Width="1.5" />
+  <Class Name="ProjMVCEF2.Models.Breed">
+    <Position X="4" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\Raca.cs</FileName>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Breed.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

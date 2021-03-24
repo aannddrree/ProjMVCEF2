@@ -14,7 +14,7 @@ namespace ProjMVCEF2.Dal
         }
 
         public DbSet<Dog> Dogs { set; get; }
-        public DbSet<Raca> Raca { set; get; }
+        public DbSet<Breed> Breeds { set; get; }
 
 
     }

@@ -9,8 +9,8 @@ namespace ProjMVCEF2.Models
     {
         public int Id { get; set; }
 
-        public string Nome { get; set; }
+        public string Name { get; set; }
 
-        public virtual Raca Raca { get; set; }
+        public virtual Breed Breed { get; set; }
     }
 }

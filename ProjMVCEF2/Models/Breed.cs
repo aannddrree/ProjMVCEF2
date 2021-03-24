@@ -1,8 +1,8 @@
 ﻿namespace ProjMVCEF2.Models
 {
-    public class Raca
+    public class Breed
     {
         public int Id { get; set; }
-        public string Descricao { get; set; }
+        public string Description { get; set; }
     }
 }

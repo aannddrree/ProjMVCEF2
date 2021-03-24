@@ -20,17 +20,17 @@ namespace ProjMVCEF2.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.RacaList = new SelectList(db.Raca, "Id", "Descricao");
+            ViewBag.BreedList = new SelectList(db.Breeds, "Id", "Description");
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nome, Raca")] Dog dog)
+        public ActionResult Create([Bind(Include = "Id,Name, Breed")] Dog dog)
         {
             if (ModelState.IsValid)
             {
-                dog.Raca = db.Raca.First(r => r.Id == dog.Raca.Id);
+                dog.Breed = db.Breeds.First(r => r.Id == dog.Breed.Id);
                 db.Dogs.Add(dog);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -41,19 +41,19 @@ namespace ProjMVCEF2.Controllers
         public ActionResult Edit(int id)
         {
             var dog = db.Dogs.First(d => d.Id == id);
-            ViewBag.RacaList = new SelectList(db.Raca, "Id", "Descricao", dog.Id);
+            ViewBag.BreedList = new SelectList(db.Breeds, "Id", "Description", dog.Id);
             return View(dog);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nome,Raca")] Dog dog)
+        public ActionResult Edit([Bind(Include = "Id,Name,Breed")] Dog dog)
         {
             if (ModelState.IsValid)
             {
                 Dog dogUpdate = db.Dogs.First(d => d.Id == dog.Id);
-                dogUpdate.Nome = dog.Nome;
-                dogUpdate.Raca = db.Raca.First(r => r.Id == dog.Raca.Id);
+                dogUpdate.Name = dog.Name;
+                dogUpdate.Breed = db.Breeds.First(r => r.Id == dog.Breed.Id);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
