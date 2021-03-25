@@ -15,6 +15,7 @@ namespace ProjMVCEF2.Dal
 
         public DbSet<Dog> Dogs { set; get; }
         public DbSet<Breed> Breeds { set; get; }
+        public DbSet<Characteristic> Characteristics { set; get; }
 
 
     }

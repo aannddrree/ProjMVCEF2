@@ -13,17 +13,31 @@
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Breed.Description)
         </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
         <dd>
             @Html.DisplayFor(model => model.Breed.Description)
         </dd>
-
+        <dt>
+            @Html.DisplayNameFor(model => model.Characteristics)
+        </dt>
+        <dd>
+            <table>
+                @foreach (var item in Model.Characteristics)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
     </dl>
 </div>
 <p>
