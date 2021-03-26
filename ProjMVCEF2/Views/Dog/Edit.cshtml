@@ -35,10 +35,36 @@
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
+            <table>
+                <tr>
+                    @{
+                        int cnt = 0;
+                        foreach (var characteristic in ViewBag.CharacteristicList)
+                        {
+                            if (cnt++ % 3 == 0)
+                            {
+                            @:</tr><tr>
+                            }
+                            @:<td>
+                                <input type="checkbox"
+                                       name="selectedCharacteristic"
+                                       value="@characteristic.Id"
+                                       @(Html.Raw(characteristic.Assigned ? "checked=\"checked\"" : "")) />
+                                @characteristic.Id @:  @characteristic.Description
+                            @:</td>
+                        }
+                    @:</tr>
+                    }
+                </table>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
         </div>
     </div>
-</div>
 }
 
 <div>
